@@ -1,0 +1,62 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.gn5r</groupId>
+	<artifactId>archetype-trueblank-project</artifactId>
+	<version>1.0.0</version>
+	<packaging>maven-archetype</packaging>
+	<name>archetype-trueblank-project</name>
+	<description>Creating true blank maven project</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<skipTests>true</skipTests>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>${deployId}</id>
+			<url>${deployUrl}</url>
+		</snapshotRepository>
+		<repository>
+			<id>${deployId}</id>
+			<url>${deployUrl}</url>
+		</repository>
+	</distributionManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.2.0</version>
+					<configuration>
+						<addDefaultExcludes>false</addDefaultExcludes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.2.0</version>
+			</extension>
+		</extensions>
+	</build>
+</project>
