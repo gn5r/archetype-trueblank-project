@@ -5,7 +5,7 @@
 
 	<groupId>com.github.gn5r</groupId>
 	<artifactId>archetype-trueblank-project</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<packaging>maven-archetype</packaging>
 	<name>archetype-trueblank-project</name>
 	<description>Creating true blank maven project</description>
@@ -34,7 +34,7 @@
 				<artifactId>maven-install-plugin</artifactId>
 				<version>3.0.0-M1</version>
 				<configuration>
-					<skip>false</skip>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 		</plugins>
