@@ -8,6 +8,9 @@
 		<requiredProperty key="gitignore">
 			<defaultValue>.gitignore</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="installSkip">
+			<defaultValue>true</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
 
 	<fileSets>
